@@ -16,7 +16,7 @@ React를 체계적으로 학습하고 실습한 내용을 정리한 저장소입
 ## 📸 스크린샷
 
 ### 메인 화면
-![Home 1](home1.png)
+!<img src="assets/home1.png" width="250"/>
 
 ### 예제 실행 화면
 ![Home 2](home2.png)
