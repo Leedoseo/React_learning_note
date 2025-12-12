@@ -217,6 +217,14 @@ header p {
   white-space: pre;
 }
 
+/* 결과 표시 영역 */
+.result-content {
+  padding: 20px;
+  background-color: grey;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
 /* 반응형 - 태블릿 */
 @media (max-width: 1024px) {
   .container {
