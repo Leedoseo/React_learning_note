@@ -7,6 +7,7 @@ import HelloWorld from './components/01-basics/HelloWorlds'
 import JSXExample from './components/01-basics/JSXExample'
 
 // 02. Props
+import Component from './components/02-props/Component'
 import PropsBasic from './components/02-props/PropsBasic'
 import PropsChildren from './components/02-props/PropsChildren'
 
@@ -45,6 +46,7 @@ function App() {
       { id: 'JSXExample', name: 'JSX 예제', component: <JSXExample /> }
     ],
     props: [
+      { id: 'Component', name: '컴포넌트', component: <Component />},
       { id: 'PropsBasic', name: 'Props 기초', component: <PropsBasic /> },
       { id: 'PropsChildren', name: 'Props Children', component: <PropsChildren /> }
     ],
