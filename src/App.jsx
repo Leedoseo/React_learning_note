@@ -5,6 +5,7 @@ import './App.css'
 // 01. 기초
 import HelloWorld from './components/01-basics/HelloWorlds'
 import JSXExample from './components/01-basics/JSXExample'
+import VirtualDOM from './components/01-basics/VirtualDOM'
 
 // 02. Props
 import Component from './components/02-props/Component'
@@ -43,7 +44,8 @@ function App() {
   const examples = {
     basics: [
       { id: 'HelloWorld', name: 'Hello World', component: <HelloWorld /> },
-      { id: 'JSXExample', name: 'JSX 예제', component: <JSXExample /> }
+      { id: 'JSXExample', name: 'JSX 예제', component: <JSXExample /> },
+      { id: 'VirtualDOM', name: '가상 돔', component: <VirtualDOM /> },
     ],
     props: [
       { id: 'Component', name: '컴포넌트', component: <Component />},
