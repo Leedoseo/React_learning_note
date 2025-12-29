@@ -147,6 +147,7 @@ header p {
 /* 예제 표시 영역 */
 .example-display {
   background-color: white;
+  color: black;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);

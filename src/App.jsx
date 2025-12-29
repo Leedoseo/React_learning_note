@@ -7,10 +7,11 @@ import HelloWorld from './components/01-basics/HelloWorlds'
 import JSXExample from './components/01-basics/JSXExample'
 import VirtualDOM from './components/01-basics/VirtualDOM'
 
-// 02. Props
-import Component from './components/02-props/Component'
-import PropsBasic from './components/02-props/PropsBasic'
-import PropsChildren from './components/02-props/PropsChildren'
+// 02. Component & Props
+import WhatIsComponent from './components/02-component/2-1-concept/01-WhatIsComponent'
+import Component from './components/02-component/Component'
+import PropsBasic from './components/02-component/PropsBasic'
+import PropsChildren from './components/02-component/PropsChildren'
 
 // 03. State
 import Counter from './components/03-state/Counter'
@@ -48,6 +49,7 @@ function App() {
       { id: 'VirtualDOM', name: '가상 돔', component: <VirtualDOM /> },
     ],
     props: [
+      { id: 'WhatIsComponent', name: '컴포넌트란?', component: <WhatIsComponent />},
       { id: 'Component', name: '컴포넌트', component: <Component />},
       { id: 'PropsBasic', name: 'Props 기초', component: <PropsBasic /> },
       { id: 'PropsChildren', name: 'Props Children', component: <PropsChildren /> }

@@ -19,7 +19,7 @@ const DestructuredButton = ({ text, color }) => {
 };
 
 // 예제 4: 기본값 설정
-const DefaultButton = ({ text, color = "black" }) => {
+const DefaultButton = ({ text, color = "white" }) => {
   return (
     <button style={{ color: color }}>
       {text} - {color}
