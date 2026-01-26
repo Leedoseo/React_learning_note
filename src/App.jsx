@@ -48,25 +48,34 @@ import BasicChildren from "./components/03-props/3-4-children/01-BasicChildren";
 import LayoutComponents from "./components/03-props/3-4-children/02-LayoutComponents";
 import ChildrenPatterns from "./components/03-props/3-4-children/03-ChildrenPatterns";
 
-// 04. Event
-import ClickEvent from "./components/04-event/ClickEvent";
-import FormEvent from "./components/04-event/FormEvent";
+// 04. Conditional Rendering - 4-1-basic
+import WhatIsConditional from "./components/04-conditional-rendering/4-1-basic/01-WhatIsConditional";
+import WhenNeeded from "./components/04-conditional-rendering/4-1-basic/02-WhenNeeded";
+import MethodsOverview from "./components/04-conditional-rendering/4-1-basic/03-MethodsOverview";
 
-// 05. Hooks
-import UseEffectExample from "./components/05-hooks/UseEffectExample";
-import CustomHookExample from "./components/05-hooks/CustomHookExample";
+// 04. Conditional Rendering - 4-2-if
+import IfElseBasic from "./components/04-conditional-rendering/4-2-if/01-IfElseBasic";
+import EarlyReturn from "./components/04-conditional-rendering/4-2-if/02-EarlyReturn";
+import MultipleConditions from "./components/04-conditional-rendering/4-2-if/03-MultipleConditions";
+import IfWithVariables from "./components/04-conditional-rendering/4-2-if/04-IfWithVariables";
 
-// 06. 조건부 렌더링
-import TernaryExample from "./components/06-conditional/TernaryExample";
-import AndOperatorExample from "./components/06-conditional/AndOperatorExample";
+// 04. Conditional Rendering - 4-3-ternary
+import TernaryBasic from "./components/04-conditional-rendering/4-3-ternary/01-TernaryBasic";
+import TernaryInJSX from "./components/04-conditional-rendering/4-3-ternary/02-TernaryInJSX";
+import AttributeValues from "./components/04-conditional-rendering/4-3-ternary/03-Attribute.Values";
+import TernaryNesting from "./components/04-conditional-rendering/4-3-ternary/04-TernaryNesting";
 
-// 07. 리스트 렌더링
-import MapExample from "./components/07-list/MapExample";
-import KeyExample from "./components/07-list/KeyExample";
+// 04. Conditional Rendering - 4-4-and
+import AndBasic from "./components/04-conditional-rendering/4-4-and/01-AndBasic";
+import ShowHide from "./components/04-conditional-rendering/4-4-and/02-ShowHide";
+import AndCautions from "./components/04-conditional-rendering/4-4-and/03-AndCautions";
+import AndVsTernary from "./components/04-conditional-rendering/4-4-and/04-AndVsTernary";
 
-// 08. 폼 처리
-import ControlledInput from "./components/08-form/ControlleredInput";
-import MultipleInputs from "./components/08-form/MultipleInputs";
+// 04. Conditional Rendering - 4-5-null
+import NullReturn from "./components/04-conditional-rendering/4-5-null/01-NullReturn";
+import ConditionalHide from "./components/04-conditional-rendering/4-5-null/02-ConditionalHide";
+import UndefinedNullFalse from "./components/04-conditional-rendering/4-5-null/03-UndefinedNullFalse";
+import Optimization from "./components/04-conditional-rendering/4-5-null/04-Optimization";
 
 function App() {
   const [activeCategory, setActiveCategory] = useState("basics");
@@ -200,48 +209,101 @@ function App() {
         component: <ChildrenPatterns />,
       },
     ],
-    event: [
-      { id: "ClickEvent", name: "클릭 이벤트", component: <ClickEvent /> },
-      { id: "FormEvent", name: "폼 이벤트", component: <FormEvent /> },
-    ],
-    hooks: [
+    conditionalRendering: [
       {
-        id: "UseEffectExample",
-        name: "useEffect",
-        component: <UseEffectExample />,
+        id: "WhatIsConditional",
+        name: "조건부 렌더링이란?",
+        component: <WhatIsConditional />,
       },
       {
-        id: "CustomHookExample",
-        name: "Custom Hook",
-        component: <CustomHookExample />,
-      },
-    ],
-    conditional: [
-      {
-        id: "TernaryExample",
-        name: "삼항 연산자",
-        component: <TernaryExample />,
+        id: "WhenNeeded",
+        name: "언제 필요할까?",
+        component: <WhenNeeded />,
       },
       {
-        id: "AndOperatorExample",
-        name: "&& 연산자",
-        component: <AndOperatorExample />,
-      },
-    ],
-    list: [
-      { id: "MapExample", name: "map 함수", component: <MapExample /> },
-      { id: "KeyExample", name: "key prop", component: <KeyExample /> },
-    ],
-    form: [
-      {
-        id: "ControlledInput",
-        name: "제어 컴포넌트",
-        component: <ControlledInput />,
+        id: "MethodsOverview",
+        name: "방법 개요",
+        component: <MethodsOverview />,
       },
       {
-        id: "MultipleInputs",
-        name: "여러 Input",
-        component: <MultipleInputs />,
+        id: "IfElseBasic",
+        name: "if-else 기본",
+        component: <IfElseBasic />,
+      },
+      {
+        id: "EarlyReturn",
+        name: "Early Return",
+        component: <EarlyReturn />,
+      },
+      {
+        id: "MultipleConditions",
+        name: "여러 조건 체크",
+        component: <MultipleConditions />,
+      },
+      {
+        id: "IfWithVariables",
+        name: "if와 변수",
+        component: <IfWithVariables />,
+      },
+      {
+        id: "TernaryBasic",
+        name: "삼항 연산자 기본",
+        component: <TernaryBasic />,
+      },
+      {
+        id: "TernaryInJSX",
+        name: "JSX 내 삼항 연산자",
+        component: <TernaryInJSX />,
+      },
+      {
+        id: "AttributeValues",
+        name: "속성값 조건부",
+        component: <AttributeValues />,
+      },
+      {
+        id: "TernaryNesting",
+        name: "삼항 연산자 중첩",
+        component: <TernaryNesting />,
+      },
+      {
+        id: "AndBasic",
+        name: "&& 연산자 기본",
+        component: <AndBasic />,
+      },
+      {
+        id: "ShowHide",
+        name: "표시/숨김",
+        component: <ShowHide />,
+      },
+      {
+        id: "AndCautions",
+        name: "&& 주의사항",
+        component: <AndCautions />,
+      },
+      {
+        id: "AndVsTernary",
+        name: "&& vs 삼항연산자",
+        component: <AndVsTernary />,
+      },
+      {
+        id: "NullReturn",
+        name: "null 반환",
+        component: <NullReturn />,
+      },
+      {
+        id: "ConditionalHide",
+        name: "조건부 숨김",
+        component: <ConditionalHide />,
+      },
+      {
+        id: "UndefinedNullFalse",
+        name: "undefined/null/false",
+        component: <UndefinedNullFalse />,
+      },
+      {
+        id: "Optimization",
+        name: "최적화",
+        component: <Optimization />,
       },
     ],
   };
@@ -253,9 +315,14 @@ function App() {
 
   // 카테고리 변경 시 첫 번째 예제로 자동 전환
   const handleCategoryChange = (category) => {
-    setActiveCategory(category);
-    setActiveExample(examples[category][0].id);
+    if (examples[category] && examples[category].length > 0) {
+      setActiveCategory(category);
+      setActiveExample(examples[category][0].id);
+    }
   };
+
+  // 디버깅용
+  console.log('App 렌더링됨', { activeCategory, activeExample, currentExample });
 
   return (
     <div className="App">
@@ -286,34 +353,12 @@ function App() {
             🔄 Props
           </button>
           <button
-            className={activeCategory === "event" ? "active" : ""}
-            onClick={() => handleCategoryChange("event")}
+            className={
+              activeCategory === "conditionalRendering" ? "active" : ""
+            }
+            onClick={() => handleCategoryChange("conditionalRendering")}
           >
-            🎪 Event
-          </button>
-          <button
-            className={activeCategory === "hooks" ? "active" : ""}
-            onClick={() => handleCategoryChange("hooks")}
-          >
-            🪝 Hooks
-          </button>
-          <button
-            className={activeCategory === "conditional" ? "active" : ""}
-            onClick={() => handleCategoryChange("conditional")}
-          >
-            🎨 조건부 렌더링
-          </button>
-          <button
-            className={activeCategory === "list" ? "active" : ""}
-            onClick={() => handleCategoryChange("list")}
-          >
-            📝 리스트
-          </button>
-          <button
-            className={activeCategory === "form" ? "active" : ""}
-            onClick={() => handleCategoryChange("form")}
-          >
-            📋 폼
+            🔀 조건부 렌더링
           </button>
         </nav>
 
@@ -334,8 +379,34 @@ function App() {
 
           {/* 예제 표시 영역 */}
           <main className="example-display">
-            <h2>{currentExample?.name}</h2>
-            <div className="example-content">{currentExample?.component}</div>
+            {currentExample ? (
+              <>
+                <h2>{currentExample.name}</h2>
+                <div className="example-content">
+                  {(() => {
+                    try {
+                      return currentExample.component;
+                    } catch (error) {
+                      return (
+                        <div style={{ color: 'red', padding: '20px' }}>
+                          <h3>오류 발생:</h3>
+                          <pre>{error.toString()}</pre>
+                          <pre>{error.stack}</pre>
+                        </div>
+                      );
+                    }
+                  })()}
+                </div>
+              </>
+            ) : (
+              <div>
+                <h2>예제를 선택해주세요</h2>
+                <p>왼쪽에서 예제를 선택하세요.</p>
+                <p style={{ color: 'red', marginTop: '10px' }}>
+                  Debug: activeCategory={activeCategory}, activeExample={activeExample}
+                </p>
+              </div>
+            )}
           </main>
         </div>
       </div>
