@@ -77,6 +77,10 @@ import ConditionalHide from "./components/04-conditional-rendering/4-5-null/02-C
 import UndefinedNullFalse from "./components/04-conditional-rendering/4-5-null/03-UndefinedNullFalse";
 import Optimization from "./components/04-conditional-rendering/4-5-null/04-Optimization";
 
+// 05. List Rendering - 5-1-what-is-list-rendering
+import WhatIsListRendering from "./components/05-list-rendering/5-1-what-is-list-rendering/01-WhatIsListRendering";
+import MapBasic from "./components/05-list-rendering/5-1-what-is-list-rendering/02-MapBasic";
+
 function App() {
   const [activeCategory, setActiveCategory] = useState("basics");
   const [activeExample, setActiveExample] = useState("HelloWorld");
@@ -306,6 +310,18 @@ function App() {
         component: <Optimization />,
       },
     ],
+    listRendering: [
+      {
+        id: "WhatIsListRendering",
+        name: "리스트 렌더링이란?",
+        component: <WhatIsListRendering />,
+      },
+      {
+        id: "MapBasic",
+        name: "map 기본",
+        component: <MapBasic />,
+      },
+    ],
   };
 
   // 현재 선택된 예제 찾기
@@ -359,6 +375,12 @@ function App() {
             onClick={() => handleCategoryChange("conditionalRendering")}
           >
             🔀 조건부 렌더링
+          </button>
+          <button
+            className={activeCategory === "listRendering" ? "active" : ""}
+            onClick={() => handleCategoryChange("listRendering")}
+          >
+            📋 리스트 렌더링
           </button>
         </nav>
 

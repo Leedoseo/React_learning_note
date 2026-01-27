@@ -27,9 +27,7 @@ function TabViewer({ title, description, resultContent, codeString }) {
 
       {/* 내용 */}
       {!showCode ? (
-        <div className="result-content">
-          {resultContent}
-        </div>
+        <div className="result-content">{resultContent}</div>
       ) : (
         <div className="code-block">
           <code>{codeString}</code>
