@@ -80,6 +80,10 @@ import Optimization from "./components/04-conditional-rendering/4-5-null/04-Opti
 // 05. List Rendering - 5-1-what-is-list-rendering
 import WhatIsListRendering from "./components/05-list-rendering/5-1-what-is-list-rendering/01-WhatIsListRendering";
 import MapBasic from "./components/05-list-rendering/5-1-what-is-list-rendering/02-MapBasic";
+import SimpleListRendering from "./components/05-list-rendering/5-1-what-is-list-rendering/03-SimpleListRendering";
+
+// 05. List Rendering - 5-2-key-prop
+import WhatIsKeyProp from "./components/05-list-rendering/5-2-key-prop/01-WhatIsKeyProp";
 
 function App() {
   const [activeCategory, setActiveCategory] = useState("basics");
@@ -320,6 +324,16 @@ function App() {
         id: "MapBasic",
         name: "map 기본",
         component: <MapBasic />,
+      },
+      {
+        id: "SimpleListRendering",
+        name: "간단한 리스트 렌더링",
+        component: <SimpleListRendering />,
+      },
+      {
+        id: "WhatIsKeyProp",
+        name: "key prop이란?",
+        component: <WhatIsKeyProp />,
       },
     ],
   };
