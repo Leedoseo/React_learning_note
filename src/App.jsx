@@ -84,6 +84,7 @@ import SimpleListRendering from "./components/05-list-rendering/5-1-what-is-list
 
 // 05. List Rendering - 5-2-key-prop
 import WhatIsKeyProp from "./components/05-list-rendering/5-2-key-prop/01-WhatIsKeyProp";
+import CorrectKeyUsage from "./components/05-list-rendering/5-2-key-prop/02-CorrectKeyUsage";
 
 function App() {
   const [activeCategory, setActiveCategory] = useState("basics");
@@ -335,12 +336,17 @@ function App() {
         name: "key prop이란?",
         component: <WhatIsKeyProp />,
       },
+      {
+        id: "CorrectKeyUsage",
+        name: "올바른 key 사용",
+        component: <CorrectKeyUsage />,
+      },
     ],
   };
 
   // 현재 선택된 예제 찾기
   const currentExample = examples[activeCategory]?.find(
-    (ex) => ex.id === activeExample
+    (ex) => ex.id === activeExample,
   );
 
   // 카테고리 변경 시 첫 번째 예제로 자동 전환
@@ -352,7 +358,11 @@ function App() {
   };
 
   // 디버깅용
-  console.log('App 렌더링됨', { activeCategory, activeExample, currentExample });
+  console.log("App 렌더링됨", {
+    activeCategory,
+    activeExample,
+    currentExample,
+  });
 
   return (
     <div className="App">
@@ -424,7 +434,7 @@ function App() {
                       return currentExample.component;
                     } catch (error) {
                       return (
-                        <div style={{ color: 'red', padding: '20px' }}>
+                        <div style={{ color: "red", padding: "20px" }}>
                           <h3>오류 발생:</h3>
                           <pre>{error.toString()}</pre>
                           <pre>{error.stack}</pre>
@@ -438,8 +448,9 @@ function App() {
               <div>
                 <h2>예제를 선택해주세요</h2>
                 <p>왼쪽에서 예제를 선택하세요.</p>
-                <p style={{ color: 'red', marginTop: '10px' }}>
-                  Debug: activeCategory={activeCategory}, activeExample={activeExample}
+                <p style={{ color: "red", marginTop: "10px" }}>
+                  Debug: activeCategory={activeCategory}, activeExample=
+                  {activeExample}
                 </p>
               </div>
             )}
