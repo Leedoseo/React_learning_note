@@ -86,6 +86,7 @@ import SimpleListRendering from "./components/05-list-rendering/5-1-what-is-list
 import WhatIsKeyProp from "./components/05-list-rendering/5-2-key-prop/01-WhatIsKeyProp";
 import CorrectKeyUsage from "./components/05-list-rendering/5-2-key-prop/02-CorrectKeyUsage";
 import KeyErrorsAndSolutions from "./components/05-list-rendering/5-2-key-prop/03-KeyErrorsAndSolutions";
+import KeyPatterns from "./components/05-list-rendering/5-2-key-prop/04-KeyPatterns";
 
 function App() {
   const [activeCategory, setActiveCategory] = useState("basics");
@@ -346,6 +347,11 @@ function App() {
         id: "KeyErrorsAndSolutions",
         name: "key 관련 에러와 해결",
         component: <KeyErrorsAndSolutions />,
+      },
+      {
+        id: "KeyPatterns",
+        name: "key 실전 패턴",
+        component: <KeyPatterns />,
       },
     ],
   };
