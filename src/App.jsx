@@ -87,6 +87,7 @@ import WhatIsKeyProp from "./components/05-list-rendering/5-2-key-prop/01-WhatIs
 import CorrectKeyUsage from "./components/05-list-rendering/5-2-key-prop/02-CorrectKeyUsage";
 import KeyErrorsAndSolutions from "./components/05-list-rendering/5-2-key-prop/03-KeyErrorsAndSolutions";
 import KeyPatterns from "./components/05-list-rendering/5-2-key-prop/04-KeyPatterns";
+import ObjectArrayRendering from "./components/05-list-rendering/5-3-complex-lists/01-ObjectArrayRendering";
 
 function App() {
   const [activeCategory, setActiveCategory] = useState("basics");
@@ -352,6 +353,11 @@ function App() {
         id: "KeyPatterns",
         name: "key 실전 패턴",
         component: <KeyPatterns />,
+      },
+      {
+        id: "ObjectArrayRendering",
+        name: "객체 배열 렌더링",
+        component: <ObjectArrayRendering />,
       },
     ],
   };
