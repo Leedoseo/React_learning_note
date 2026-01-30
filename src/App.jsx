@@ -89,6 +89,7 @@ import KeyErrorsAndSolutions from "./components/05-list-rendering/5-2-key-prop/0
 import KeyPatterns from "./components/05-list-rendering/5-2-key-prop/04-KeyPatterns";
 import ObjectArrayRendering from "./components/05-list-rendering/5-3-complex-lists/01-ObjectArrayRendering";
 import NestedArrayRendering from "./components/05-list-rendering/5-3-complex-lists/02-NestedArrayRendering";
+import FilteredArrayRendering from "./components/05-list-rendering/5-3-complex-lists/03-FilteredArrayRendering";
 
 function App() {
   const [activeCategory, setActiveCategory] = useState("basics");
@@ -364,6 +365,11 @@ function App() {
         id: "NestedArrayRendering",
         name: "중첩 배열 렌더링",
         component: <NestedArrayRendering />,
+      },
+      {
+        id: "FilteredArrayRendering",
+        name: "필터링 배열 렌더링",
+        component: <FilteredArrayRendering />,
       },
     ],
   };
