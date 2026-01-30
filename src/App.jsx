@@ -88,6 +88,7 @@ import CorrectKeyUsage from "./components/05-list-rendering/5-2-key-prop/02-Corr
 import KeyErrorsAndSolutions from "./components/05-list-rendering/5-2-key-prop/03-KeyErrorsAndSolutions";
 import KeyPatterns from "./components/05-list-rendering/5-2-key-prop/04-KeyPatterns";
 import ObjectArrayRendering from "./components/05-list-rendering/5-3-complex-lists/01-ObjectArrayRendering";
+import NestedArrayRendering from "./components/05-list-rendering/5-3-complex-lists/02-NestedArrayRendering";
 
 function App() {
   const [activeCategory, setActiveCategory] = useState("basics");
@@ -358,6 +359,11 @@ function App() {
         id: "ObjectArrayRendering",
         name: "객체 배열 렌더링",
         component: <ObjectArrayRendering />,
+      },
+      {
+        id: "NestedArrayRendering",
+        name: "중첩 배열 렌더링",
+        component: <NestedArrayRendering />,
       },
     ],
   };
