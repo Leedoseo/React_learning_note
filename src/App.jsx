@@ -91,6 +91,11 @@ import ObjectArrayRendering from "./components/05-list-rendering/5-3-complex-lis
 import NestedArrayRendering from "./components/05-list-rendering/5-3-complex-lists/02-NestedArrayRendering";
 import FilteredArrayRendering from "./components/05-list-rendering/5-3-complex-lists/03-FilteredArrayRendering";
 
+// 06. Event Handling
+import EventBasics from "./components/06-event-handling/01-EventBasics";
+import PassingArguments from "./components/06-event-handling/02-PassingArguments";
+import EventControl from "./components/06-event-handling/03-EventControll";
+
 function App() {
   const [activeCategory, setActiveCategory] = useState("basics");
   const [activeExample, setActiveExample] = useState("HelloWorld");
@@ -372,6 +377,23 @@ function App() {
         component: <FilteredArrayRendering />,
       },
     ],
+    eventHandling: [
+      {
+        id: "EventBasics",
+        name: "이벤트 기초",
+        component: <EventBasics />,
+      },
+      {
+        id: "PassingArguments",
+        name: "이벤트에 인자 전달",
+        component: <PassingArguments />,
+      },
+      {
+        id: "EventControl",
+        name: "이벤트 제어 (preventDefault & stopPropagation)",
+        component: <EventControl />,
+      },
+    ],
   };
 
   // 현재 선택된 예제 찾기
@@ -435,6 +457,12 @@ function App() {
             onClick={() => handleCategoryChange("listRendering")}
           >
             📋 리스트 렌더링
+          </button>
+          <button
+            className={activeCategory === "eventHandling" ? "active" : ""}
+            onClick={() => handleCategoryChange("eventHandling")}
+          >
+            🖱️ 이벤트 핸들링
           </button>
         </nav>
 
